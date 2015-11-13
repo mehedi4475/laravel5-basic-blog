@@ -1,0 +1,23 @@
+ul{
+    list-style: none;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    padding:15px 15px;
+    background-color: green;
+    display: block;
+    color: white;
+    font-family: sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    background-color: red;
+    text-decoration: none;
+    color: white;
+}
