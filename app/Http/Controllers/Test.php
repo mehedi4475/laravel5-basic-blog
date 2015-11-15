@@ -72,8 +72,10 @@ class Test extends Controller {
 	 * @return Response
 	 */
 	public function edit($id)
-	{
-		//
+	{  
+        $editPost = mytest::find($id);
+        
+        return view('test/edit')->with('editPost', $editPost);
 	}
 
 	/**
@@ -82,9 +84,19 @@ class Test extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
-	{
-		//
+	public function update($id, postsubmit $request)
+	{  
+		$updatePost = mytest::find($id);
+        
+        $updatePost->title = $request->input('title');
+        $updatePost->description = $request->input('description');
+        
+        $updatePost->save();
+        
+        Session::flash('message','Successfully update');
+        Session::flash('alert','alert-success');
+        
+        return redirect('/');
 	}
 
 	/**
@@ -95,7 +107,19 @@ class Test extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$delete = mytest::find($id);
+        
+        
+        
+        
+        
+        //$delete->delete();
+        
+       // Session::flash('message','Successfully Delete');
+       // Session::flash('alert','alert-success');
+        
+        //return redirect('/');
+        
 	}
 
 }
