@@ -10,7 +10,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>KG SIS</title>
+    <title>Login</title>
 
 
     <link rel="apple-touch-icon" href="[INSERT apple-tuch-icon.png]">
@@ -57,13 +57,13 @@
                 <div style="margin-bottom: 25px" class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>                                    
                    
-                    {!! Form::text('email', Input::old('email'), array('placeholder' => 'awesome@awesome.com', 'class'=>'form-control')) !!}
+                    {!! Form::text('email', Input::old('email'), array('placeholder' => 'Email', 'class'=>'form-control')) !!}
                     
                     </div>
 
                 <div style="margin-bottom: 25px" class="input-group">
                      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
-                     {!! Form::password('password', array('class'=>'form-control')) !!}
+                     {!! Form::password('password', array('placeholder'=>'Password','class'=>'form-control')) !!}
                 </div>
 
 
@@ -71,7 +71,7 @@
                     <!-- Button -->
 
                     <div class="col-sm-12 controls">
-                     {!! Form::submit('Submit!') !!}                             
+                     {!! Form::submit('Login', array('class'=>'btn btn-primary')) !!}                             
 
                     </div>
                 </div>

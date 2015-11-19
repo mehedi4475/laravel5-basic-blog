@@ -10,8 +10,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>My Blog Site</title>    
-    <link rel="apple-touch-icon" href="[INSERT apple-tuch-icon.png]">
+    <title>Gallery</title>    
+
     <style>
         body {
             padding-top: 50px;
@@ -35,19 +35,21 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <div class="header-area">
-                   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                         <div class="logo">
                             <img src="http://placehold.it/120x50" alt="">
                         </div>
                    </div>                    
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                         <div class="menu">
                             <ul>
-                                <li><a href="{{URL::to('/')}}">Home</a></li>
+                                <li><a href="{{URL::to('/dashboard')}}">Home</a></li>
                                 <li><a href="#">Download</a></li>
                                 <li><a href="#">My Story</a></li>
                                 <li><a href="#">Resume</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Contact</a></li> 
+                                <li><a href="{{URL::to('/logout')}}">Logout</a></li> 
+                                                          
                             </ul>
                         </div>
                    </div>
