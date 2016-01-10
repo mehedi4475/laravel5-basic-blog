@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Session;
 use DB;
 use Hash;
 use Auth;
+use PDF;
 
 
 
@@ -122,8 +123,18 @@ class Test extends Controller {
     //Show a single post
 	public function show($id)
 	{
-		$post = mytest::find($id);        
-        return view('test/show')->with('post',$post);       
+		$post = mytest::find($id);
+        
+        $one = "<h1>SOHAGA.COM</h1>";
+        $one .="Post title: ".$post->id."<br/>";
+        $one .="Post title: ".$post->title."<br/>";
+        $one .="Post description: ".$post->description."<br/>";
+        
+        $pdf = PDF::loadHTML($one)->setPaper('a4')->save('myfile.pdf'); 
+        return $pdf->download('myfile.pdf');
+        
+        
+        //return view('test/show')->with('post',$post);       
         
 	}
     
